@@ -81,12 +81,6 @@ const history: HistoryEntry[] = [
   { timestamp: "2026-03-28 03:00:00", rule: "Resource optimization scan", result: "success", details: "Found 4 optimization opportunities" },
 ];
 
-const agentStatusColors: Record<string, string> = {
-  idle: "text-muted-foreground",
-  running: "text-blue-500",
-  completed: "text-emerald-500",
-  error: "text-red-500",
-};
 
 export default function AutomationPage() {
   const [ruleStates, setRuleStates] = useState<Record<string, boolean>>(

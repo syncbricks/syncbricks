@@ -1,4 +1,4 @@
-import type { Agent, AgentTask, AgentFinding } from "./types";
+import type { Agent, AgentTask } from "./types";
 
 export class AgentOrchestrator {
   private agents: Map<string, Agent> = new Map();

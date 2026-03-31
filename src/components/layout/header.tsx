@@ -6,19 +6,25 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { MobileNav } from "./mobile-nav";
-import { useEffect, useState } from "react";
+import { useSyncExternalStore } from "react";
+
+function getIsDark() {
+  return typeof document !== "undefined" && document.documentElement.classList.contains("dark");
+}
+
+function subscribe(callback: () => void) {
+  const observer = new MutationObserver(callback);
+  if (typeof document !== "undefined") {
+    observer.observe(document.documentElement, { attributes: true, attributeFilter: ["class"] });
+  }
+  return () => observer.disconnect();
+}
 
 export function Header() {
-  const [dark, setDark] = useState(false);
-
-  useEffect(() => {
-    const isDark = document.documentElement.classList.contains("dark");
-    setDark(isDark);
-  }, []);
+  const dark = useSyncExternalStore(subscribe, getIsDark, () => false);
 
   const toggleTheme = () => {
     document.documentElement.classList.toggle("dark");
-    setDark(!dark);
   };
 
   return (

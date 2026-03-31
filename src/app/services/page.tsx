@@ -17,7 +17,7 @@ import {
   Home,
   GitBranch,
   FileText,
-  Image,
+  Image as ImageIcon,
   Ban,
   Settings,
   Rocket,
@@ -54,7 +54,7 @@ const services: Service[] = [
   { name: "Home Assistant", description: "Open-source home automation platform", icon: <Home className="h-5 w-5" />, status: "installed", category: "Automation" },
   { name: "Gitea", description: "Lightweight self-hosted Git service", icon: <GitBranch className="h-5 w-5" />, status: "available", category: "Productivity" },
   { name: "Paperless-ngx", description: "Document management system with OCR", icon: <FileText className="h-5 w-5" />, status: "available", category: "Productivity" },
-  { name: "Immich", description: "Self-hosted photo and video backup", icon: <Image className="h-5 w-5" />, status: "available", category: "Media" },
+  { name: "Immich", description: "Self-hosted photo and video backup", icon: <ImageIcon className="h-5 w-5" />, status: "available", category: "Media" },
   { name: "Pi-hole", description: "Network-wide ad blocking via DNS", icon: <Ban className="h-5 w-5" />, status: "installed", category: "Networking" },
 ];
 

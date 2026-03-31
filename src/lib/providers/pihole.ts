@@ -44,11 +44,6 @@ interface PiholeQueryLogEntry {
   response_time: number;
 }
 
-interface PiholeCustomDNSEntry {
-  domain: string;
-  ip: string;
-}
-
 export class PiholeClient {
   private baseUrl: string;
   private apiToken: string;
