@@ -1,12 +1,38 @@
 {
-  "name": "nexlab",
+  "name": "syncbricks",
   "version": "0.1.0",
+  "description": "Open-source, AI-powered homelab and IT infrastructure management platform",
+  "author": "Amjid Ali <hello@syncbricks.com.au> (https://syncbricks.com.au)",
+  "license": "MIT",
+  "homepage": "https://github.com/syncbricks/syncbricks",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/syncbricks/syncbricks.git"
+  },
+  "bugs": {
+    "url": "https://github.com/syncbricks/syncbricks/issues"
+  },
+  "keywords": [
+    "homelab",
+    "infrastructure",
+    "proxmox",
+    "docker",
+    "pfsense",
+    "dashboard",
+    "monitoring",
+    "ai-agents",
+    "self-hosted",
+    "devops"
+  ],
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "db:generate": "drizzle-kit generate",
+    "db:push": "drizzle-kit push",
+    "db:studio": "drizzle-kit studio"
   },
   "dependencies": {
     "@base-ui/react": "^1.3.0",
